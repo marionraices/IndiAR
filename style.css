@@ -1,104 +1,226 @@
-/* Estilos para el navbar */
+* {box-sizing: border-box;}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family:"Roboto" ;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+}
+
 body {
+
   font-family: 'Roboto', sans-serif;
-}
-nav {
-	background-color: #333;
-}
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-nav li {
-	float: left;
-}
-nav li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Estilos para el footer */
-footer {
-	background-color: #f2f2f2;
-	padding: 20px;
-	text-align: center;
-}
-
-.animated-item {
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.animated-item:hover {
-  transform: scale(1.1);
-}
-
-		form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 50px auto;
-			padding: 20px;
-			max-width: 600px;
-			background-color: #f2f2f2;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		}
-
-		input[type=text], input[type=email], textarea {
-			margin-bottom: 10px;
-			padding: 10px;
-			width: 100%;
-			border-radius: 5px;
-			border: none;
-			background-color: #fff;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-			resize: none;
-		}
-
-		input[type=submit] {
-			background-color: #4CAF50;
-			color: white;
-			padding: 10px;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			margin-top: 10px;
-			width: 100%;
-		}
-
-		input[type=submit]:hover {
-			background-color: #3e8e41;
-		}
-
-		label {
-			font-weight: bold;
-			margin-bottom: 5px;
-			display: block;
-			text-align: left;
-			font-size: 1.2em;
-		}
-        .product-carousel {
-  margin: 30px 0;
-}
-
-.product-carousel ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
 }
 
-.product-carousel li {
-  margin-right: 20px;
+
+img {
+    display: block;
+  width: 100%;
+}
+/*Estilos Header*/
+.main-header {padding: 0 20px;}
+.main-header-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #ff4e00;
+  font-family: 'Poppins';
+}
+.main-header-title .word1{color: #454546;}
+.main-nav{display: none;}
+
+.main-header-container{
+display: flex;
+justify-content: space-between;
+align-items: center;}
+.icon-menu{
+font-size: 1.5rem;
+border: 1px solid #454546;
+display: block;
+padding: 10px 20px;
+cursor: pointer;
 }
 
-.product-carousel img {
+.main-header-btn{
+display: block;
+height: max-content;
+padding: 10PX 25px;
+border: 1px solid #454546;
+color: #454546;
+text-decoration: none;
+
+}
+.main-header-input{display: block;
+    height: max-content;
+padding: 10px;}
+
+/*Estilos Slider*/
+.container-slider{
+margin: 50px auto;
+width: 100%;
+position: relative;
+overflow: hidden;
+}
+.slider{
+    display: flex;
+    width: 300%;
+    height: 300px;
+margin-left: -100%;
+position: relative;
+}
+.slider::before{content: "";
+position: absolute;
+z-index: 1;
+width: 100%;
+top: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.3);
+height: 100%;}
+.slider-section{width: 100%;
+position: relative;}
+.slider-img{
+    display: block;
+    width: 100%;
+height: 100%;
+object-fit: cover;}
+.slider-btn{
+    z-index: 1;
+    position: absolute;
+width: 40px;height: 40px;
+color:rgba(255, 255, 255,0.7);top: 50%;
+transform:translateY(-50%);
+font-size: 32px;
+font-weight: bold;
+font-family: monospace;
+text-align: center;
+cursor: pointer;
+border-radius: 50%;}
+.slider-btn:hover{color: #fff;
+background: rgba(255, 255, 255, 0.3);}
+.slider-btn-left{left: 10px;}
+.slider-btn-right{right: 10px;}
+
+.slider-content{
+    z-index: 1;position: absolute;
+top: 50%;left: 50%;
+transform: translate(-50%,-50%);
+color: #fff;
+width: 60%;
+
+text-align: center;}
+
+.slider-title{
+    font-size: 2em;
+    margin: 0;
+}
+.slider-txt{ margin: 5px 0;}
+
+.slider-link{display: block;
+border: 1px solid #ff4e00;
+color: #fff;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+width: 150px;
+margin:20px auto;}
+.slider-link:hover{background: rgba(255,78,0,0.3);}
+.main{padding: 10px;
+}
+/*Estilos de juegos*/
+.container-games{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 64px;
+}
+.game{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.game-new::before{
+    content: "New";
+    background: #ff4e00;
+    text-align: center;
+    padding: 10px;
+    width: 60px;
+    position: absolute;
+    top:0px;
+    right: 8px;
+    color: white;
+}
+.game-bestseller::before{
+    content: "Most Sold";
+    background: #009dff;
+    text-align: center;
+    padding:6px 10px;
+    width: 60px;
+    position: absolute;
+    top:0px;
+    right: 8px;
+    color: white;
+}
+.game-img{
+width: 100%;
+height: 120px;
+object-fit: cover;
+}
+.game-title{
+    text-align: center;
+}
+.game-price{color: #FF4E00;
+font-weight: bold;}
+.game-icon{
+    display: block;
+    margin: 20px;
+    
+}
+
+footer {
+  background-color: #f2f2f2;
+  position: absolute;
+  padding: 10px;
+  text-align: center;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+}
+
+
+
+input[type='text'],
+input[type='email'],
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+
+input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+input[type='submit']:hover {
+  background-color: #3e8e41;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+  font-size: 1.2em;
 }
