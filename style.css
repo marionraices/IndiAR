@@ -101,6 +101,7 @@ img {
   font-size: 1em;
 }
 .main-header-input {
+caret-color: #ff4e00;
   font-size: 1em;
   display: block;
   padding: 10px;
