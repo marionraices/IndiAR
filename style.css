@@ -6,12 +6,12 @@
   src: url('./fonts/Poppins-Bold.ttf');
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+  font-family: 'Tangerine';
+  src: url('http.//fonts.googleapis.com/cssamily=Tangerine');
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Tangerine', sans-serif;
   margin: 0;
 }
 
