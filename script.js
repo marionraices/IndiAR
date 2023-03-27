@@ -37,3 +37,9 @@ btnLeft.addEventListener('click', function () {
 });
 
 setInterval(function(){Next();},5000);
+
+//boton menu
+let btnMenu=document.getElementById('btn-menu');
+let mainNav=document.getElementById('main-nav');
+btnMenu.addEventListener('click',function(){
+mainNav.classList.toggle('mostrar');});
